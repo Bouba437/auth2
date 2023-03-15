@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const muv = require("mongoose-unique-validator");
 
 const userSchema = mongoose.Schema({
     firstName: {type: String, required: true},
@@ -9,6 +8,5 @@ const userSchema = mongoose.Schema({
     date: {type: Date, default: Date.now},
 })
 
-mongoose.plugin(muv);
 
 module.exports = mongoose.model('user', userSchema)
